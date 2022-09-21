@@ -19,16 +19,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7sG-WT-1yj">
-                                    <rect key="frame" x="138" y="8" width="260" height="34"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7sG-WT-1yj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nrk-Q0-kVR">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="34"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Cohort ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9UH-0l-fsB">
-                                            <rect key="frame" x="132" y="0.0" width="128" height="34"/>
+                                            <rect key="frame" x="0.0" y="52" width="414" height="48"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -36,6 +36,12 @@
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="7sG-WT-1yj" secondAttribute="bottom" id="1rV-6R-vRu"/>
+                                <constraint firstAttribute="trailing" secondItem="7sG-WT-1yj" secondAttribute="trailing" id="3NT-mH-uwA"/>
+                                <constraint firstItem="7sG-WT-1yj" firstAttribute="top" secondItem="krb-ha-fwk" secondAttribute="top" id="Axl-q3-Hsj"/>
+                                <constraint firstItem="7sG-WT-1yj" firstAttribute="leading" secondItem="krb-ha-fwk" secondAttribute="leading" id="P5X-UP-sJX"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" textLabel="h62-rD-zz9" detailTextLabel="eWZ-Th-nHM" style="IBUITableViewCellStyleValue1" id="xM5-xj-tep">
@@ -70,10 +76,17 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="c1L-bD-Ozl">
-                        <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="fZv-8W-FpV"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="fZv-8W-FpV">
+                            <connections>
+                                <action selector="addButtonClick:" destination="kci-bp-BNA" id="uKt-eE-mIN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="studentCohortLabel" destination="9UH-0l-fsB" id="Mwg-ii-7kc"/>
+                        <outlet property="studentNameLabel" destination="nrk-Q0-kVR" id="HaY-A4-H1o"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pb5-Xs-EEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

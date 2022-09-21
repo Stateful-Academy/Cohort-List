@@ -10,9 +10,9 @@ import UIKit
 class Student{
     
     let name: String
-    let cohortID: Int
+    let cohortID: String
     
-    init(name: String, cohortID: Int) {
+    init(name: String, cohortID: String) {
         self.name = name
         self.cohortID = cohortID
     }

@@ -17,7 +17,7 @@ class StudentController {
     //CRUD
     //Create, reuse, update, delete
     
-    func createStudent(name: String, cohortID: Int) {
+    func createStudent(name: String, cohortID: String) {
        let newStudent = Student(name: name, cohortID: cohortID)
         students.append(newStudent)
     }
