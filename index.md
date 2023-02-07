@@ -62,8 +62,6 @@ Pause here to build and run. Your app should build and display a blank `UITablev
 
 ### Great work!
 
-Now is a great time to make a commit to Github.
-
 ---
 
 ## Model
@@ -80,8 +78,6 @@ Our app will only have one Model at this time. `Student`
     1. Feel free to review the video [classes](https://player.vimeo.com/video/664057680?h=0c1d398ab2) for information on what a `member-wise initializer` is and how to write one. As always, you’re welcome to use external resources such as Google and Stack Overflow.
 
 ### Ain’t it a beaut?
-
-Commit?
 
 ---
 
@@ -131,8 +127,6 @@ Now let's create our `Collection`
 3. Once the `newStudent` has been created, append that element to your collection
 
 ### Great work!
-
-Commit time!
 
 ---
 
